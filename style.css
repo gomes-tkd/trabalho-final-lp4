@@ -1,0 +1,552 @@
+/*Tipografia*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+/* cores */
+:root {
+    --cor-0: #ffffff;
+    --cor-1: #f7f7f7;
+    --cor-2: #ededed;
+    --cor-3: #dedede;
+    --cor-4: #cccccc;
+    --cor-5: #b2b2b2;
+    --cor-6: #9c9c9c;
+    --cor-7: #717171;
+    --cor-8: #595959;
+    --cor-9: #404040;
+    --cor-10: #2e2e2e;
+    --cor-11: #111111;
+    --cor-12: #000000;
+    --cor-p1: #ffbb00;
+    --cor-p2: #e4a30b;
+    --cor-p3: #a66f00;
+    --cor-p4: #664400;
+    --cor-p5: #332200;
+}
+
+.cor-0 {
+    color: var(--cor-0);
+}
+.cor-1 {
+    color: var(--cor-1);
+}
+.cor-2 {
+    color: var(--cor-2);
+}
+.cor-3 {
+    color: var(--cor-3);
+}
+.cor-4 {
+    color: var(--cor-4);
+}
+.cor-5 {
+    color: var(--cor-5);
+}
+.cor-6 {
+    color: var(--cor-6);
+}
+.cor-7 {
+    color: var(--cor-7);
+}
+.cor-8 {
+    color: var(--cor-8);
+}
+.cor-9 {
+    color: var(--cor-9);
+}
+.cor-10 {
+    color: var(--cor-10);
+}
+.cor-11 {
+    color: var(--cor-11);
+}
+.cor-12 {
+    color: var(--cor-12);
+}
+.cor-p1 {
+    color: var(--cor-p1);
+}
+.cor-p2 {
+    color: var(--cor-p2);
+}
+.cor-p3 {
+    color: var(--cor-p3);
+}
+.cor-p4 {
+    color: var(--cor-p4);
+}
+.cor-p5 {
+    color: var(--cor-p5);
+}
+
+/* GERAIS */
+body {
+    margin: 0;
+    color: #333;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.min-height,
+main {
+    min-height: calc(100vh - 12rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+input,
+textarea {
+    padding: 5px;
+    border: 1px solid var(--cor-2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-radius: 5px;
+    border-color: var(--cor-p1);
+    background: var(--cor-0);
+    box-shadow: 0 0 0 2px #fea;
+    transition: 0.2s;
+}
+
+textarea {
+    resize: none;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    flex: 1;
+}
+
+.usuario-btn {
+    display: block;
+    padding: 12px 16px;
+    background-color: var(--cor-p1);
+    color: var(--cor-p4);
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    place-self: end;
+    border: none;
+}
+
+.border-container {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 5px;
+    height: min-content;
+}
+
+.preview-imagem {
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+.preview-imagem::after {
+    content: "";
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.subtitulo {
+    text-transform: uppercase;
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.btn-deletar {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+    color: #ccc;
+    font-size: 0.625rem;
+}
+
+.post-autor {
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+    color: #ccc;
+    font-size: 0.625rem;
+}
+
+/* Header - Cabeçalho */
+.header-bg {
+    background: #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.header-menu {
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.header-menu a {
+    display: inline-block;
+
+    padding: 10px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header-menu a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #fff;
+    margin-top: 2px;
+    transition: 0.5s;
+}
+
+.header-menu a:hover::after,
+.header-menu a.ativo::after {
+    width: 100%;
+}
+
+/* index */
+.container-index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: end;
+    height: min-content;
+}
+
+.container-index .intro {
+    display: grid;
+    text-align: right;
+    gap: 64px;
+    padding: 64px 20px;
+    background: #eee;
+    border-radius: 5px 0 0 5px;
+}
+
+.container-index img {
+    border-radius: 0 5px 5px 0;
+}
+
+/* auth */
+.auth-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.auth-content {
+    height: min-content;
+    border-radius: 5px;
+    background: #eee;
+    padding: 25px;
+}
+
+.auth-form {
+    display: grid;
+}
+
+.auth-info {
+    display: grid;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.auth-info label {
+    margin: 10px 0;
+}
+
+.auth-info::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    display: block;
+    margin: 5px 0;
+    border-bottom: 1px solid #cdcdcd;
+    border-radius: 4px;
+    top: 65px;
+}
+
+.auth-btn {
+    display: block;
+    padding: 16px 40px;
+    background-color: var(--cor-p1);
+    color: var(--cor-p4);
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 4px;
+    border: none;
+    place-self: center;
+}
+
+/* perfil */
+.perfil-info {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.perfil-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45rem;
+}
+
+.perfil-status img {
+    border-radius: 50%;
+}
+
+.perfil-status img,
+.perfil-status p {
+    margin-right: 15px;
+}
+
+.perfil-status-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.perfil-editar {
+    font-size: 0.825rem;
+    display: block;
+    position: relative;
+    padding: 16px 0;
+    color: #ccc;
+}
+
+.usuario-add {
+    padding: 12px 16px;
+    background-color: var(--cor-p1);
+    color: var(--cor-p4);
+    cursor: pointer;
+    border-radius: 4px;
+    place-self: end;
+}
+
+.perfil-postagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.perfil-bio {
+    padding: 12px;
+}
+
+.perfil-bio h3 {
+    margin: 15px 0;
+}
+
+/* Editar perfil */
+.edit-perfil-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    gap: 20px;
+}
+
+.edit-perfil-subtitulo {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    text-align: start;
+}
+
+.edit-perfil-form {
+    display: grid;
+}
+
+.edit-perfil-form button {
+    place-self: center;
+}
+
+.edit-perfil-dados {
+    display: grid;
+    gap: 10px;
+    margin: 6px 0;
+}
+
+.edit-perfil-bio {
+    display: grid;
+    gap: 10px;
+}
+
+.edit-perfil-senha-posicao {
+    grid-column: 1 / -1;
+}
+
+.edit-perfil-senha-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.edit-perfil-senha-dados {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+
+.border-container h3 {
+    margin-bottom: 10px;
+}
+
+/* adicionar postagem */
+
+.add-postagem-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 8rem;
+}
+
+.add-postagem-container h3 {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.postagem-dados {
+    display: grid;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.postagem-info {
+    display: grid;
+}
+
+.postagem-titulo {
+    font-weight: bold;
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.postagem-info p {
+    margin: 5px 0;
+}
+
+.postagem-descricao-decoracao {
+    margin: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+.postagem-descricao {
+    padding: 8px;
+}
+
+.postagem-curtidas {
+    place-self: end;
+    font-size: 0.625rem;
+}
+
+.postagem-comentario-container {
+    display: grid;
+}
+
+.postagem-comentario-form {
+    place-self: end;
+}
+
+.postagem-comentario-form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* postagens */
+
+.postagens-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* postagem */
+
+.postagem-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.postagem-subtitulo {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.postagem-comentario-div {
+    height: 300px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.postagem-comentarios-lista {
+    word-break: break-word;
+    height: auto;
+    grid-template-columns: 1fr;
+}
+
+.postagem-comentario-item {
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.postagem-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--cor-12);
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+footer p {
+    color: var(--cor-0);
+    text-align: center;
+}
